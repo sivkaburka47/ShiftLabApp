@@ -14,6 +14,13 @@
 		E6180D872C52B08C00E65532 /* ShiftLabApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6180D852C52B08C00E65532 /* ShiftLabApp.xcdatamodeld */; };
 		E6180D892C52B08D00E65532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6180D882C52B08D00E65532 /* Assets.xcassets */; };
 		E6180D8C2C52B08D00E65532 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E6180D8B2C52B08D00E65532 /* Base */; };
+		E63E2A142C52BF4E00166422 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63E2A132C52BF4E00166422 /* ViewModel.swift */; };
+		E63E2A172C52BF9F00166422 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63E2A162C52BF9F00166422 /* Dynamic.swift */; };
+		E6755D5C2C5566DE0054DE6B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D5B2C5566DE0054DE6B /* StorageManager.swift */; };
+		E6755D5F2C5593470054DE6B /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D5D2C5593470054DE6B /* User+CoreDataClass.swift */; };
+		E6755D602C5593470054DE6B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D5E2C5593470054DE6B /* User+CoreDataProperties.swift */; };
+		E6755D622C559F9E0054DE6B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D612C559F9E0054DE6B /* RegisterViewController.swift */; };
+		E6755D642C559FEC0054DE6B /* RegisterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6755D632C559FEC0054DE6B /* RegisterView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		E6180D882C52B08D00E65532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6180D8B2C52B08D00E65532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6180D8D2C52B08D00E65532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63E2A132C52BF4E00166422 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E63E2A162C52BF9F00166422 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		E6755D5B2C5566DE0054DE6B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		E6755D5D2C5593470054DE6B /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E6755D5E2C5593470054DE6B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E6755D612C559F9E0054DE6B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E6755D632C559FEC0054DE6B /* RegisterView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +72,63 @@
 		E6180D7B2C52B08C00E65532 /* ShiftLabApp */ = {
 			isa = PBXGroup;
 			children = (
+				E63E2A0D2C52BC9C00166422 /* ViewModels */,
+				E6180D882C52B08D00E65532 /* Assets.xcassets */,
+				E63E2A0E2C52BCA700166422 /* Views */,
+				E63E2A0F2C52BCAF00166422 /* Models */,
+				E6180D8D2C52B08D00E65532 /* Info.plist */,
 				E6180D7C2C52B08C00E65532 /* AppDelegate.swift */,
 				E6180D7E2C52B08C00E65532 /* SceneDelegate.swift */,
-				E6180D802C52B08C00E65532 /* ViewController.swift */,
-				E6180D822C52B08C00E65532 /* Main.storyboard */,
-				E6180D882C52B08D00E65532 /* Assets.xcassets */,
-				E6180D8A2C52B08D00E65532 /* LaunchScreen.storyboard */,
-				E6180D8D2C52B08D00E65532 /* Info.plist */,
 				E6180D852C52B08C00E65532 /* ShiftLabApp.xcdatamodeld */,
+				E6755D5B2C5566DE0054DE6B /* StorageManager.swift */,
 			);
 			path = ShiftLabApp;
+			sourceTree = "<group>";
+		};
+		E63E2A0D2C52BC9C00166422 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E63E2A152C52BF8C00166422 /* Bindings */,
+				E63E2A132C52BF4E00166422 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E63E2A0E2C52BCA700166422 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6755D612C559F9E0054DE6B /* RegisterViewController.swift */,
+				E6180D802C52B08C00E65532 /* ViewController.swift */,
+				E63E2A102C52BCCF00166422 /* StryBoards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E63E2A0F2C52BCAF00166422 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6755D5D2C5593470054DE6B /* User+CoreDataClass.swift */,
+				E6755D5E2C5593470054DE6B /* User+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E63E2A102C52BCCF00166422 /* StryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				E6180D8A2C52B08D00E65532 /* LaunchScreen.storyboard */,
+				E6180D822C52B08C00E65532 /* Main.storyboard */,
+				E6755D632C559FEC0054DE6B /* RegisterView.storyboard */,
+			);
+			path = StryBoards;
+			sourceTree = "<group>";
+		};
+		E63E2A152C52BF8C00166422 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				E63E2A162C52BF9F00166422 /* Dynamic.swift */,
+			);
+			path = Bindings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +191,7 @@
 			files = (
 				E6180D892C52B08D00E65532 /* Assets.xcassets in Resources */,
 				E6180D8C2C52B08D00E65532 /* Base in Resources */,
+				E6755D642C559FEC0054DE6B /* RegisterView.storyboard in Resources */,
 				E6180D842C52B08C00E65532 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,8 +204,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6180D812C52B08C00E65532 /* ViewController.swift in Sources */,
+				E6755D622C559F9E0054DE6B /* RegisterViewController.swift in Sources */,
 				E6180D7D2C52B08C00E65532 /* AppDelegate.swift in Sources */,
+				E6755D5F2C5593470054DE6B /* User+CoreDataClass.swift in Sources */,
+				E6755D602C5593470054DE6B /* User+CoreDataProperties.swift in Sources */,
 				E6180D872C52B08C00E65532 /* ShiftLabApp.xcdatamodeld in Sources */,
+				E6755D5C2C5566DE0054DE6B /* StorageManager.swift in Sources */,
+				E63E2A172C52BF9F00166422 /* Dynamic.swift in Sources */,
+				E63E2A142C52BF4E00166422 /* ViewModel.swift in Sources */,
 				E6180D7F2C52B08C00E65532 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
