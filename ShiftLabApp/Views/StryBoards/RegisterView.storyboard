@@ -164,6 +164,7 @@
                         <outlet property="loginTextField" destination="jvm-f6-Ltm" id="i6b-gI-ehi"/>
                         <outlet property="passwordRepeatTextField" destination="kRN-X9-0dx" id="pkt-ET-RdG"/>
                         <outlet property="passwordTextField" destination="Acu-SW-YNO" id="Q9Q-Jq-qz5"/>
+                        <outlet property="registerButton" destination="ca0-Px-t7d" id="La2-Nv-6nY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

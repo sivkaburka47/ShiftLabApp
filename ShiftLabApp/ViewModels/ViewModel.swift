@@ -16,10 +16,10 @@ class ViewModel {
         let isAuthenticated = StorageManager.shared.authenticateUser(login: login, password: password)
         
         if isAuthenticated != "" {
-            statusText.value = "You succesfully logged in, \(isAuthenticated) "
+            statusText.value = "С возвращением, \(isAuthenticated) "
                         statusColor.value = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         } else {
-                        statusText.value = "Login in failed."
+                        statusText.value = "Неверный логин или пароль."
                         statusColor.value = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
         }
     }
