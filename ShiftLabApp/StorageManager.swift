@@ -20,10 +20,13 @@ public final class StorageManager: NSObject {
     private var context: NSManagedObjectContext {
         appDelegate.persistentContainer.viewContext
     }
-    public func createUser(_ id: Int16, login: String, passwords: String) {
+    public func createUser(_ id: Int16, name: String, surname: String, birthday: Date, login: String, passwords: String) {
         guard let userEntityDescription = NSEntityDescription.entity(forEntityName: "User", in: context) else { return }
         let user = User(entity: userEntityDescription, insertInto: context)
         user.id = id
+        user.name = name
+        user.surname = surname
+        user.birthday = birthday
         user.login = login
         user.passwords = passwords
         
@@ -50,11 +53,14 @@ public final class StorageManager: NSObject {
         }
     }
     
-    func authenticateUser(login: String, password: String) -> Bool {
+    func authenticateUser(login: String, password: String) -> String {
         if let user = fetchUser(login) {
-            return user.passwords == password
+            if user.passwords == password {
+                return user.name ?? ""
+            }
+            
         }
-        return false
+        return ""
     }
     
     public func fetchUser(_ login: String) -> User? {

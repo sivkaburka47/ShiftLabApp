@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var passwordField: UITextField!
     
-    @IBAction func registerButtonPressed(_ sender: Any) {
+    @IBAction func goToRegister(_ sender: Any) {
         let storyboard = UIStoryboard(name: "RegisterView", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
         present(vc, animated: true)

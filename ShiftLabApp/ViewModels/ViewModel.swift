@@ -15,8 +15,8 @@ class ViewModel {
     func userButtonPressed(login: String, password: String) {
         let isAuthenticated = StorageManager.shared.authenticateUser(login: login, password: password)
         
-        if isAuthenticated {
-                        statusText.value = "You succesfully logged in."
+        if isAuthenticated != "" {
+            statusText.value = "You succesfully logged in, \(isAuthenticated) "
                         statusColor.value = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         } else {
                         statusText.value = "Login in failed."

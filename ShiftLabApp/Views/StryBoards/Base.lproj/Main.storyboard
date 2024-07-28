@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="ShiftLabApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShiftLabApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,19 +58,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wek-gY-GIU">
-                                <rect key="frame" x="240" y="360" width="133" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4y-vt-gle">
+                                <rect key="frame" x="240" y="359.66666666666669" width="133" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Регистрация"/>
                                 <connections>
-                                    <action selector="registerButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1R-mv-uyB"/>
+                                    <action selector="goToRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lGf-S2-8hr"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wek-gY-GIU" firstAttribute="top" secondItem="d58-th-txv" secondAttribute="bottom" constant="35.329999999999998" id="1JA-bd-zgP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VcG-h2-iUa" secondAttribute="trailing" constant="20" id="7pt-4D-XVb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o62-4f-byJ" secondAttribute="trailing" constant="220" id="83y-0u-wDL"/>
                             <constraint firstItem="VcG-h2-iUa" firstAttribute="top" secondItem="VUG-bD-8Ud" secondAttribute="bottom" constant="8" symbolic="YES" id="APC-UL-uk9"/>
@@ -84,8 +83,8 @@
                             <constraint firstItem="o62-4f-byJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LWd-40-x3z"/>
                             <constraint firstItem="x3Y-XS-rQ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MEH-CE-RdE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VUG-bD-8Ud" secondAttribute="trailing" constant="20" id="MRe-Ko-xmx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wek-gY-GIU" secondAttribute="trailing" constant="20" id="Oai-KW-I25"/>
                             <constraint firstItem="VUG-bD-8Ud" firstAttribute="top" secondItem="1hW-71-3WJ" secondAttribute="bottom" constant="8" symbolic="YES" id="QJh-mI-glb"/>
+                            <constraint firstItem="L4y-vt-gle" firstAttribute="leading" secondItem="o62-4f-byJ" secondAttribute="trailing" constant="67" id="QRr-A3-Xaa"/>
                             <constraint firstItem="HDf-ax-BlY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QTT-SI-K5N"/>
                             <constraint firstItem="HDf-ax-BlY" firstAttribute="top" secondItem="o62-4f-byJ" secondAttribute="bottom" constant="35" id="S3T-Ak-V6g"/>
                             <constraint firstItem="VcG-h2-iUa" firstAttribute="top" secondItem="VUG-bD-8Ud" secondAttribute="bottom" constant="8" symbolic="YES" id="VJf-mk-WIj"/>
@@ -94,9 +93,10 @@
                             <constraint firstItem="1hW-71-3WJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cWQ-eS-sdZ"/>
                             <constraint firstItem="d58-th-txv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dGx-tp-EoT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VcG-h2-iUa" secondAttribute="trailing" constant="20" id="egk-Kh-3ln"/>
-                            <constraint firstItem="wek-gY-GIU" firstAttribute="leading" secondItem="o62-4f-byJ" secondAttribute="trailing" constant="67" id="fk8-kl-Ppk"/>
                             <constraint firstItem="x3Y-XS-rQ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="oDq-Yg-bgF"/>
                             <constraint firstItem="d58-th-txv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s0Y-cy-oxh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L4y-vt-gle" secondAttribute="trailing" constant="20" id="sJZ-gc-dNy"/>
+                            <constraint firstItem="L4y-vt-gle" firstAttribute="top" secondItem="d58-th-txv" secondAttribute="bottom" constant="35" id="tqM-qA-Wif"/>
                             <constraint firstItem="VUG-bD-8Ud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vge-sM-3hE"/>
                         </constraints>
                     </view>
