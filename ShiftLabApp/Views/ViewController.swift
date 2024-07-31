@@ -29,7 +29,6 @@ class ViewController: UIViewController {
                 window.rootViewController = tableScreenViewController
                 window.makeKeyAndVisible()
                 
-                // Добавление анимации перехода (необязательно)
                 let transition = CATransition()
                 transition.type = .fade
                 transition.duration = 0.3

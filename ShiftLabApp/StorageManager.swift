@@ -8,6 +8,20 @@
 import Foundation
 import UIKit
 import CoreData
+import CommonCrypto
+
+extension String {
+    func sha256() -> String {
+        if let data = self.data(using: .utf8) {
+            var hash = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+            data.withUnsafeBytes {
+                _ = CC_SHA256($0.baseAddress, CC_LONG(data.count), &hash)
+            }
+            return hash.map { String(format: "%02x", $0) }.joined()
+        }
+        return ""
+    }
+}
 
 public final class StorageManager: NSObject {
     public static let shared = StorageManager()
@@ -28,7 +42,7 @@ public final class StorageManager: NSObject {
         user.surname = surname
         user.birthday = birthday
         user.login = login
-        user.passwords = passwords
+        user.passwords = passwords.sha256()
         
         appDelegate.saveContext()
     }
@@ -55,7 +69,7 @@ public final class StorageManager: NSObject {
     
     func authenticateUser(login: String, password: String) -> String {
         if let user = fetchUser(login) {
-            if user.passwords == password {
+            if user.passwords == password.sha256() {
                 return user.name ?? ""
             }
             
@@ -77,7 +91,7 @@ public final class StorageManager: NSObject {
         do {
             guard let users = try? context.fetch(fetchRequest) as? [User],
                   let user = users.first(where: {$0.login == login}) else { return }
-            user.passwords = newPassword
+            user.passwords = newPassword.sha256()
         }
         
         appDelegate.saveContext()
