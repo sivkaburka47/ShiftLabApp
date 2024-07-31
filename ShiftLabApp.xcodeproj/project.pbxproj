@@ -21,6 +21,9 @@
 		E6755D602C5593470054DE6B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D5E2C5593470054DE6B /* User+CoreDataProperties.swift */; };
 		E6755D622C559F9E0054DE6B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D612C559F9E0054DE6B /* RegisterViewController.swift */; };
 		E6755D642C559FEC0054DE6B /* RegisterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6755D632C559FEC0054DE6B /* RegisterView.storyboard */; };
+		E6755D6A2C5A5C3F0054DE6B /* TableScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D692C5A5C3F0054DE6B /* TableScreenViewController.swift */; };
+		E6755D6E2C5A5F820054DE6B /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D6D2C5A5F820054DE6B /* GreetingViewController.swift */; };
+		E6755D702C5A74160054DE6B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6755D6F2C5A74160054DE6B /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		E6755D5E2C5593470054DE6B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E6755D612C559F9E0054DE6B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E6755D632C559FEC0054DE6B /* RegisterView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterView.storyboard; sourceTree = "<group>"; };
+		E6755D692C5A5C3F0054DE6B /* TableScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScreenViewController.swift; sourceTree = "<group>"; };
+		E6755D6D2C5A5F820054DE6B /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		E6755D6F2C5A74160054DE6B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,10 @@
 		E63E2A0E2C52BCA700166422 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E6755D6D2C5A5F820054DE6B /* GreetingViewController.swift */,
 				E6755D612C559F9E0054DE6B /* RegisterViewController.swift */,
 				E6180D802C52B08C00E65532 /* ViewController.swift */,
+				E6755D692C5A5C3F0054DE6B /* TableScreenViewController.swift */,
 				E63E2A102C52BCCF00166422 /* StryBoards */,
 			);
 			path = Views;
@@ -109,6 +117,7 @@
 			children = (
 				E6755D5D2C5593470054DE6B /* User+CoreDataClass.swift */,
 				E6755D5E2C5593470054DE6B /* User+CoreDataProperties.swift */,
+				E6755D6F2C5A74160054DE6B /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,16 +212,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6755D6A2C5A5C3F0054DE6B /* TableScreenViewController.swift in Sources */,
 				E6180D812C52B08C00E65532 /* ViewController.swift in Sources */,
 				E6755D622C559F9E0054DE6B /* RegisterViewController.swift in Sources */,
 				E6180D7D2C52B08C00E65532 /* AppDelegate.swift in Sources */,
 				E6755D5F2C5593470054DE6B /* User+CoreDataClass.swift in Sources */,
 				E6755D602C5593470054DE6B /* User+CoreDataProperties.swift in Sources */,
 				E6180D872C52B08C00E65532 /* ShiftLabApp.xcdatamodeld in Sources */,
+				E6755D6E2C5A5F820054DE6B /* GreetingViewController.swift in Sources */,
 				E6755D5C2C5566DE0054DE6B /* StorageManager.swift in Sources */,
 				E63E2A172C52BF9F00166422 /* Dynamic.swift in Sources */,
 				E63E2A142C52BF4E00166422 /* ViewModel.swift in Sources */,
 				E6180D7F2C52B08C00E65532 /* SceneDelegate.swift in Sources */,
+				E6755D702C5A74160054DE6B /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

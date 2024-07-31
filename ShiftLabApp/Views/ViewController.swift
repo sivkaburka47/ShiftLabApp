@@ -19,7 +19,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        viewModel.userButtonPressed(login: (loginField.text ?? ""), password: (passwordField.text ?? ""))
+        let userName = viewModel.userButtonPressed(login: (loginField.text ?? ""), password: (passwordField.text ?? ""))
+        if userName != nil {
+            let tableScreenViewController = storyboard?.instantiateViewController(withIdentifier: "TableScreenViewController") as! TableScreenViewController
+            
+            tableScreenViewController.username = userName
+
+            if let window = UIApplication.shared.windows.first {
+                window.rootViewController = tableScreenViewController
+                window.makeKeyAndVisible()
+                
+                // Добавление анимации перехода (необязательно)
+                let transition = CATransition()
+                transition.type = .fade
+                transition.duration = 0.3
+                window.layer.add(transition, forKey: kCATransition)
+            }
+        }
+        
     }
     @IBOutlet var label: UILabel!
     
